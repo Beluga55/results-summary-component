@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  /* Colors */
+  --Lightred: hsla(0, 100%, 67%, 0.1);
+  --orangeyyellow: hsla(39, 100%, 56%, 0.1);
+  --greenteal: hsla(166, 100%, 37%, 0.1);
+  --cobaltblue: hsla(234, 85%, 45%, 0.1);
+  --Red: hsl(0, 100%, 67%);
+  --Yellow: hsl(39, 100%, 56%);
+  --Green: hsl(166, 100%, 37%);
+  --Blue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+  /* Background */
+  --lightslateblue: hsl(252, 100%, 67%);
+  --lightroyalblue: hsl(241, 81%, 54%);
+
+  /* Circle */
+  --violetblue: hsla(256, 72%, 46%, 1);
+  --persianblue: hsla(241, 72%, 46%, 0);
+
+  /* Neutral */
+  --white: hsl(0, 0%, 100%);
+  --paleblue: hsl(221, 100%, 96%);
+  --lightlavender: hsl(241, 100%, 89%);
+  --darkgrayblue: hsl(224, 30%, 27%);
+
+  /* Font Weight */
+  --font: "Hanken Grotesk", sans-serif;
+  --font-500: 500;
+  --font-700: 700;
+  --font-800: 800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 18px;
+  font-family: var(--font);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.first__container {
+  background: linear-gradient(
+    180deg,
+    var(--lightslateblue),
+    var(--lightroyalblue)
+  );
+  border-radius: 0 0 32px 32px;
+  text-align: center;
+  padding: 1.5rem 0 2.5rem 0;
+}
+
+.first__content h1 {
+  font-size: 1rem;
+  color: var(--lightlavender);
+}
+
+.first__content p {
+  color: var(--lightlavender);
+  font-size: 1rem;
+  padding: 0 2.5rem;
+  margin-top: 0.5rem;
+}
+
+.circle {
+  background: linear-gradient(180deg, var(--violetblue), var(--persianblue));
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+.circle__content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle__content h1 {
+  font-size: 3rem;
+  color: var(--white);
+}
+
+.circle__content p {
+  color: var(--lightlavender);
+  font-size: 0.9rem;
+  opacity: 0.5;
+  margin: 0;
+  padding: 0;
+}
+
+.first__content h2 {
+  color: var(--white);
+}
+
+.second__content {
+  padding: 1.75rem 2rem;
+}
+
+.second__content h3 {
+  color: var(--darkgrayblue);
+}
+
+.summary__content {
+  margin: 1rem 0 1.5rem;
+}
+
+.memory,
+.verbal,
+.reaction,
+.visual {
+  border-radius: 4px;
+  padding: .75rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.reaction__wrapper,
+.memory__wrapper,
+.verbal__wrapper,
+.visual__wrapper {
+  display: inline-flex;
+  align-items: center;
+  column-gap: .25rem;
+  color: rgba(128, 128, 128, 0.7);
+  font-weight: var(--font-700)
+}
+
+#reaction__marks,
+#memory__marks,
+#verbal__marks,
+#visual__marks {
+  color: var(--darkgrayblue);
+}
+
+.reaction {
+  background: var(--Lightred);
+  margin-bottom: 1rem;
+  color: var(--Red);
+}
+
+.memory {
+  background: var(--orangeyyellow);
+  margin-bottom: 1rem;
+  color: var(--Yellow);
+}
+
+.verbal {
+  background: var(--greenteal);
+  margin-bottom: 1rem;
+  color: var(--Green);
+}
+
+.visual {
+  background: var(--cobaltblue);
+  color: var(--Blue);
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  column-gap: 0.5rem;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button button {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 0.9rem 0;
+  font-family: var(--font);
+  color: var(--white);
+  font-weight: var(--font-800);
+  outline: none;
+  border: none;
+  background: var(--darkgrayblue);
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 620px;
+    box-shadow: 2px 5px 100px 0 var(--lightlavender);
+    border-radius: 32px;
+  }
+
+  .first__container {
+    border-radius: 32px;
+    padding: 0;
+    position: relative;
+  }
+
+  .first__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 1rem);
+  }
+}
